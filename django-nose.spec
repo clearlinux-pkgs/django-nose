@@ -4,7 +4,7 @@
 #
 Name     : django-nose
 Version  : 1.4.1
-Release  : 11
+Release  : 12
 URL      : https://pypi.python.org/packages/source/d/django-nose/django-nose-1.4.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/d/django-nose/django-nose-1.4.1.tar.gz
 Summary  : Makes your Django tests simple and snappy
