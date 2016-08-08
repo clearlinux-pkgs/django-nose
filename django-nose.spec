@@ -4,7 +4,7 @@
 #
 Name     : django-nose
 Version  : 1.4.4
-Release  : 19
+Release  : 20
 URL      : http://pypi.debian.net/django-nose/django-nose-1.4.4.tar.gz
 Source0  : http://pypi.debian.net/django-nose/django-nose-1.4.4.tar.gz
 Summary  : Makes your Django tests simple and snappy
