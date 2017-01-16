@@ -4,14 +4,14 @@
 #
 Name     : django-nose
 Version  : 1.4.4
-Release  : 23
+Release  : 24
 URL      : http://pypi.debian.net/django-nose/django-nose-1.4.4.tar.gz
 Source0  : http://pypi.debian.net/django-nose/django-nose-1.4.4.tar.gz
 Summary  : Makes your Django tests simple and snappy
 Group    : Development/Tools
 License  : BSD-3-Clause
 Requires: django-nose-python
-BuildRequires : nose-python
+BuildRequires : nose
 BuildRequires : pbr
 BuildRequires : pip
 BuildRequires : python-dev
@@ -29,7 +29,6 @@ django-nose
 %package python
 Summary: python components for the django-nose package.
 Group: Default
-Requires: nose-python
 
 %description python
 python components for the django-nose package.
@@ -40,6 +39,7 @@ python components for the django-nose package.
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1484543372
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -49,9 +49,10 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
+export SOURCE_DATE_EPOCH=1484543372
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot}
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
 
 %files
 %defattr(-,root,root,-)
