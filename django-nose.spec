@@ -4,7 +4,7 @@
 #
 Name     : django-nose
 Version  : 1.4.6
-Release  : 29
+Release  : 30
 URL      : https://files.pythonhosted.org/packages/91/b4/0f84946a3f18c1b1c75c9eac8272f684dc1f3815b24c4941d59d433d8886/django-nose-1.4.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/b4/0f84946a3f18c1b1c75c9eac8272f684dc1f3815b24c4941d59d433d8886/django-nose-1.4.6.tar.gz
 Summary  : Makes your Django tests simple and snappy
@@ -15,14 +15,18 @@ Requires: django-nose-python = %{version}-%{release}
 Requires: django-nose-python3 = %{version}-%{release}
 Requires: Django
 Requires: Sphinx
+Requires: check-manifest
 Requires: coverage
 Requires: flake8
 Requires: flake8-docstrings
 Requires: ipdb
+Requires: ipdbplugin
 Requires: ipython
 Requires: nose
+Requires: pyroma
 Requires: tox
 Requires: wheel
+BuildRequires : Django
 BuildRequires : buildreq-distutils3
 BuildRequires : nose
 
@@ -65,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1538612196
+export SOURCE_DATE_EPOCH=1541265028
 python3 setup.py build
 
 %check
