@@ -4,7 +4,7 @@
 #
 Name     : django-nose
 Version  : 1.4.6
-Release  : 33
+Release  : 34
 URL      : https://files.pythonhosted.org/packages/91/b4/0f84946a3f18c1b1c75c9eac8272f684dc1f3815b24c4941d59d433d8886/django-nose-1.4.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/b4/0f84946a3f18c1b1c75c9eac8272f684dc1f3815b24c4941d59d433d8886/django-nose-1.4.6.tar.gz
 Summary  : Makes your Django tests simple and snappy
@@ -32,8 +32,11 @@ BuildRequires : nose
 
 %description
 ===========
-        django-nose
-        ===========
+django-nose
+===========
+.. image:: https://img.shields.io/pypi/v/django-nose.svg
+:alt: The PyPI package
+:target: https://pypi.python.org/pypi/django-nose
 
 %package license
 Summary: license components for the django-nose package.
@@ -69,7 +72,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541265917
+export SOURCE_DATE_EPOCH=1551027679
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %check
