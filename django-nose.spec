@@ -4,7 +4,7 @@
 #
 Name     : django-nose
 Version  : 1.4.6
-Release  : 34
+Release  : 35
 URL      : https://files.pythonhosted.org/packages/91/b4/0f84946a3f18c1b1c75c9eac8272f684dc1f3815b24c4941d59d433d8886/django-nose-1.4.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/b4/0f84946a3f18c1b1c75c9eac8272f684dc1f3815b24c4941d59d433d8886/django-nose-1.4.6.tar.gz
 Summary  : Makes your Django tests simple and snappy
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551027679
+export SOURCE_DATE_EPOCH=1551032250
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
